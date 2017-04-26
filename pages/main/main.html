@@ -1,0 +1,19 @@
+<div class="containerPhotos">
+    <div class="photoItem" ng-repeat="item in vm.data">
+        <header>
+            <h2>Posted by {{item.user.username}}</h2>
+        </header>
+        <img ng-src="{{item.urls.thumb}}" ng-click="vm.goItem(item)" alt="">
+        <footer>
+            <h3>{{item.created_at}}</h3>
+            <h4><span class="heart"></span>{{item.likes}}</h4>
+        </footer>
+    </div>
+</div>
+<div class="">
+    <ul>
+        <li ng-click="vm.changePage(false)" ng-hide="vm.currPage === 1"> < </li>
+        <li>{{vm.currPage}}</li>
+        <li ng-click="vm.changePage(true)"> > </li>
+    </ul>
+</div>

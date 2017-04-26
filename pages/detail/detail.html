@@ -1,0 +1,21 @@
+<div>
+    <div class="photoWrap">
+        <img ng-src="{{vm.photo.urls.raw}}" alt="">
+    </div>
+    <div class="photoDesc">
+        <table border="1">
+            <caption>Photo detail</caption>
+            <tr>
+                <th>{{vm.photo.location.country}}</th>
+            </tr>
+            <tr>
+                <th>{{vm.photo.location.city}}</th>
+            </tr>
+            <tr>
+                <th>
+                    <a ng-href="{{vm.photo.links.download}}" target="_blank">Download</a>
+                </th>
+            </tr>
+        </table>
+    </div>
+</div>
