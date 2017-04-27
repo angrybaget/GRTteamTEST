@@ -17,7 +17,6 @@
                     per_page: 10}
             }).then(function(res){
                 vm.data = res.data;
-                console.log(JSON.stringify(res,'',4) )
             });
         }
 
@@ -29,7 +28,6 @@
         vm.changePage = function (isNext) {
             vm.currPage = isNext?vm.currPage + 1:vm.currPage - 1;
             getData();
-            console.log(vm.currPage);
         }
     }
 
